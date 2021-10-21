@@ -46,6 +46,13 @@ p{
 	color: white;
 	flex-basis: 50%;
 	min-width: 300px;
+	color: white;
+}
+.col-2 offer{
+	color: black;
+	flex-basis: 50%;
+	min-width: 300px;
+	color: black;
 }
 .col-2 img{ 
 	max-width: 100%;
@@ -66,7 +73,7 @@ p{
 	transition: background 0.5s;
 }
 .btn:hover{
-	background: #FF0000;
+	background: #00FF00;
 }
 .header{
 	background-color: #000000;
@@ -96,8 +103,85 @@ p{
 	padding: 10px;
 	min-width: 200px;
 	margin-bottom: 50px;
+	transition: transform 0.5s;
 }
 .col-4 img{
 	width: 100%;
 }
+.title{
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	line-height: 60px;
+}
+.title::after{
+	content: '';
+	background: #000000;
+	width: 80px;
+	height: 5px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
 
+.offer{
+	background:black;
+	margin-top: 80px;
+	padding: 30px 0;
+}
+.col-2 .offer-img{
+	padding: 50px;
+}
+small{
+	color; #fff
+}
+.footer{
+	background: #808080;
+	color:black;
+	font-size: 14px;
+	padding: 60px 0 20px;
+}
+.menu-icon{
+	width: 28px;
+	margin-left: 20px;
+	display: none;
+}
+
+/*--media quesry for menu--*/
+@media only screen and (max-width: 800px){
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background; #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+
+	}
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: #fff;
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;	
+	}
+}
+
+/*--media quesry for menu less than 600 size--*/
+@media only screen and (max-width: 600px){
+	.row{
+		text-align: center;
+	}
+	.col-2, col-3, col-4,{
+		flex-basis: 100%;
+	}
+}
